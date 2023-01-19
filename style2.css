@@ -1,0 +1,33 @@
+body{
+    font-family: Verdana;
+    background-color: rgb(6, 146, 6);
+}
+.gora{
+    text-align: center;
+    font-size: 30px;
+}
+.srodek{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+ul{
+    list-style-type: disc;
+}
+input{
+    padding: 10px;
+    margin: 15px;
+    border-radius: 20px;
+    width: 30%;
+    height: 125px;
+    background-color: rgb(59, 179, 59);
+    font-size: 20px;
+    font-weight: bold;
+}
+.cofaj{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
