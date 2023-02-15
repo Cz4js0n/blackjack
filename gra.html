@@ -7,18 +7,28 @@
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
-    <div class="krupier">
-        <img src="red_back.png">
-        <img src="red_back.png">
+    <div class="krupier" id="krupier">
+    </div>
+    <div class="srodek">
         <img src="red_back.png">
     </div>
-    <div class="karty-gracza"></div>
+    <div class="karty-gracza" id="karty-gracza">
+    </div>
     <div class="gracz-przyciski">
-        <input type="button" value="DOBIERZ KARTE">
-        <input type="button" value="PASS">
+        <input type="button" value="DOBIERZ KARTE" onclick="dobierz()">
+        <input type="button" value="PASS" onclick="pass()">
     </div>
     <div class="cofnij">
         <input type="button" value="COFNIJ" onclick="window.location.href='index.html'">
     </div>
+    <div class="result">
+        <span>Wynik: </span>
+        <span id="wynik">0</span>
+    </div>
+    <div class="krupier-result">
+        <span>Wynik krupiera: </span>
+        <span id="wynik-k">0</span>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

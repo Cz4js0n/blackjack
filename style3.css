@@ -17,14 +17,17 @@ input{
     font-size: 14px;
     font-weight: bold;
 }
-.krupier{
-    height: 350px;
+.srodek{
+    height: 233px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .karty-gracza{
-    height: 350px;
+    height: 233px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .gracz-przyciski{
     height: 87.5px;
@@ -32,4 +35,62 @@ input{
     align-items: center;
     justify-content: center;
     width: 100%;
+}
+.srodek img{
+    transform: rotate(90deg);
+}
+.krupier{
+    height: 233px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.krupier img{
+    height: 200px;
+    width: 140px;
+    margin: 0px;
+    padding: 0px;
+}
+.karty-gracza img{
+    height: 200px;
+    width: 140px;
+    margin: 0px;
+    padding: 0px;
+}
+.cofnij{
+    float: left;
+    width: 40%;
+}
+.result{
+    float: left;
+    width: 30%;
+    position: absolute;
+    left: 460px;
+    bottom: 30px;
+}
+.cofnij input{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+.result span{
+    background-color: white;
+    width: 50%;
+    border: 2px solid black;
+    padding: 15px;
+}
+.krupier-result{
+    float: left;
+    width: 30%;
+    position: absolute;
+    left: 860px;
+    bottom: 30px;
+}
+.krupier-result span{
+    background-color: white;
+    width: 50%;
+    border: 2px solid black;
+    padding: 15px;
 }
