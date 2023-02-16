@@ -2,15 +2,19 @@ var karty = {"2Karo":2,"2Kier":2,"2Pik":2,"2Trefl":2,"3Karo":3,"3Kier":3,"3Pik":
 "AKaro":11,"AKier":11,"APik":11,"ATrefl":11};
 function pass(){
     if(parseInt(document.getElementById("wynik-k").innerHTML)<21){
-        var keys = Object.keys(karty);
-        var pole_krupiera = document.getElementById("krupier");
-        var id_karty = Math.floor((Math.random()*keys.length));
-        var karta = keys[id_karty];
-        document.getElementById("wynik-k").innerHTML=parseInt(document.getElementById("wynik-k").innerHTML)+parseInt(karty[karta]);
-        keys.pop(id_karty);
-        pole_krupiera.innerHTML+=`<img src=${karta}.png>`; 
+        while(parseInt(document.getElementById("wynik-k").innerHTML)<21){
+            var keys = Object.keys(karty);
+            var pole_krupiera = document.getElementById("krupier");
+            var id_karty = Math.floor((Math.random()*keys.length));
+            var karta = keys[id_karty];
+            document.getElementById("wynik-k").innerHTML=parseInt(document.getElementById("wynik-k").innerHTML)+parseInt(karty[karta]);
+            keys.pop(id_karty);
+            pole_krupiera.innerHTML+=`<img src=${karta}.png>`; 
+        }
+        document.getElementById("przycisk-pass").disabled=true;
+        wynik();
     }
-    else if(parseInt(document.getElementById("wynik-k").innerHTML)==21)
+    else if(parseInt(document.getElementById("wynik-k").innerHTML)>=21)
     {
         alert("Przegrałeś");
         var potwierdz2 = confirm("Czy chcesz rozpocząć grę od nowa? ")
@@ -33,8 +37,15 @@ function dobierz(){
         pole_gracza.innerHTML+=`<img src=${karta}.png>`;
     }
     else if(parseInt(document.getElementById("wynik").innerHTML)>21){
-        alert("Przekroczyłeś 21. Teraz dobiera krupier");
-        pass();
+        alert("Przekroczyłeś 21. Koniec Gry");
+        alert("Przegrałeś");
+        var potwierdz2 = confirm("Czy chcesz rozpocząć grę od nowa? ")
+        if(potwierdz2 == true){
+            document.location.reload(true);
+        }
+        else{
+            window.location.href='index.html';
+        }
     }
     else if(parseInt(document.getElementById("wynik").innerHTML)==21){
         alert("Wygrałeś");
